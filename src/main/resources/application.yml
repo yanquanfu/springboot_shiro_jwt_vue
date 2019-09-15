@@ -1,0 +1,24 @@
+server:
+  port: 8081
+  servlet:
+    context-path:
+spring:
+  mvc:
+    static-path-pattern: /**
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    druid:
+      username: root
+      password: 123456
+      db-type: mysql
+      url: jdbc:mysql://127.0.0.1:3306/jeecgboot20190816?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+minidao:
+   base-package: com.helpyun.*
+   db-type: mysql
+   show-sql: true
+
+

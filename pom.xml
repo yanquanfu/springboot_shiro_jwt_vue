@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.7.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.helpyun</groupId>
+    <artifactId>springbootweb</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springbootweb</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <!--TODO properties begin-->
+        <java.version>1.8</java.version>
+        <druid.version>1.1.10</druid.version>
+        <minidao.version>1.6.7</minidao.version>
+        <mybatis-plus.version>3.0.6</mybatis-plus.version>
+        <commons-dbcp.version>1.4</commons-dbcp.version>
+        <commons-pool.version>1.6</commons-pool.version>
+        <baomidou.version>2.5.0</baomidou.version>
+        <spring.boot.version>2.1.0.RELEASE</spring.boot.version>
+        <shiro.version>1.4.0</shiro.version>
+        <jwt.version>0.9.0</jwt.version>
+        <json-lib.verion>2.4</json-lib.verion>
+        <!-- TODO properties end-->
+    </properties>
+
+    <dependencies>
+        <!-- TODO dependency begin-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--启动时启动内置tomcat -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+    <!--    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>-->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!-- servlet 依赖包 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JSTL (JSP standard Tag Library) JSP 标准标签库 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <!-- <scope>provided</scope>-->
+        </dependency>
+
+
+
+<!-- org/jeecgframework/minidao/auto/MinidaoAutoConfiguration.class cannot be opened because it does not exist
+        <dependency>
+            <groupId>org.jeecgframework</groupId>
+            <artifactId>minidao-spring-boot-starter</artifactId>
+            <version>${minidao.version}</version>
+        </dependency>-->
+
+ <!--       &lt;!&ndash; minidao &ndash;&gt;
+        <dependency>
+            <groupId>org.jeecgframework</groupId>
+            <artifactId>minidao-pe</artifactId>
+            <version>${minidao.version}</version>
+        </dependency>
+        &lt;!&ndash; DBCP连接池 &ndash;&gt;
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>${commons-pool.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${commons-dbcp.version}</version>
+            <scope>compile</scope>
+        </dependency>-->
+
+        <!-- mybatis-plus
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency> -->
+
+        <!-- 动态数据源
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${baomidou.version}</version>
+        </dependency>
+-->
+
+        <dependency>
+            <groupId>org.jeecgframework</groupId>
+            <artifactId>minidao-spring-boot-starter</artifactId>
+            <version>1.6.7.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jwt.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>${json-lib.verion}</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+
+        <!-- TODO dependency end-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
